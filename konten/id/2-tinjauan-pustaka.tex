@@ -116,6 +116,6 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
   F{1}{-}Score=\frac{2 \times Precision \times Recall}{Precision+Recall}
 \end{equation}
 
-\subsection{Implementasi ke Intel NUC}
+\subsection{Implementasi ke NUC}
 
 Implementasi sistem deteksi gerakan mata ke Intel NUC dimulai dengan menginstal pustaka perangkat lunak yang diperlukan, seperti Python, OpenCV, dan Mediapipe, ke dalam perangkat tersebut. Model yang telah dilatih kemudian diintegrasikan dengan program kontrol kursi roda, menghubungkan input dari kamera ke sinyal keluaran untuk motor kursi roda. Intel NUC terhubung ke kamera melalui port USB dan berkomunikasi dengan motor kursi roda melalui protokol serial. Sistem ini dioptimalkan untuk mencapai keseimbangan antara kecepatan dan akurasi, dengan pengaturan parameter model dan komunikasi sehingga memungkinkan kendali kursi roda berbasis gerakan mata yang akurat dan responsif.
