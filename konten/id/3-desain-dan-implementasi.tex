@@ -65,3 +65,17 @@ Sebelum dataset di-\emph{training} menggunakan \emph{layer} CNN, dilakukan beber
 \subsection{Implementasi ke NUC}
 
 Implementasi sistem deteksi gerakan mata ke Intel NUC dimulai dengan menginstal pustaka perangkat lunak yang diperlukan, seperti Python, OpenCV, dan Mediapipe, ke dalam perangkat tersebut. Model yang telah dilatih kemudian diintegrasikan dengan program kontrol kursi roda, menghubungkan input dari kamera ke sinyal keluaran untuk motor kursi roda. Intel NUC terhubung ke kamera melalui port USB dan berkomunikasi dengan motor kursi roda melalui protokol serial. Sistem ini dioptimalkan untuk mencapai keseimbangan antara kecepatan dan akurasi, dengan pengaturan parameter model dan komunikasi sehingga memungkinkan kendali kursi roda berbasis gerakan mata yang akurat dan responsif.
+
+\subsection{Alur \textit{Hardware} Sistem}
+
+%Gambar 3.2
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/bab3/aluralat.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Alur \emph{Hardware} Sistem}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:aluralat}
+\end{figure}
+
+Pada Gambar \ref{fig:aluralat} ditunjukkan bahwa kamera akan mengambil citra dari mata pengguna. Citra tersebut kemudian akan diproses oleh Intel NUC menggunakan model CNN yang telah dilatih sebelumnya. Hasil dari proses tersebut akan menghasilkan perintah gerakan yang akan dikirimkan ke motor kursi roda melalui protokol Wi-Fi. Motor kursi roda akan menerima perintah tersebut dan menggerakkan kursi roda sesuai dengan perintah yang diberikan.

@@ -5,22 +5,7 @@
 \begin{abstract}
 
   % Ubah paragraf berikut sesuai dengan abstrak dari penelitian.
-  Penelitian ini menghadirkan pendekatan baru untuk meningkatkan mobilitas bagi pasien
-  ALS dengan mengembangkan sistem kontrol pergerakan kursi roda menggunakan MediaPipe,
-  yang berfokus pada pengenalan gerakan mata, dan diimplementasikan pada platform Jetson
-  Nano. Studi ini didorong oleh tantangan yang dihadapi oleh pasien ALS, yang meskipun
-  kehilangan mobilitas fisik, tetap dapat menggerakkan mata. Sistem yang diusulkan bertujuan
-  untuk memberikan kemandirian yang lebih besar dan peningkatan kualitas hidup bagi individu
-  tersebut. Metodologi penelitian ini terdiri dari beberapa komponen kunci: pengambilan dan
-  pengolahan gambar mata, ekstraksi fitur yang relevan, estimasi dan klasifikasi posisi mata, serta
-  eksekusi sistem kontrol pada Next Unit of Computing (NUC). Integrasi teknologi visi komputer
-  dengan sistem tertanam merupakan batu penjuru penelitian ini, memastikan mekanisme kontrol
-  kursi roda yang responsif dan efisien. Dengan memanfaatkan kekuatan MediaPipe untuk
-  pengenalan gestur waktu nyata dan kemampuan komputasi Jetson Nano, studi ini menjanjikan
-  peningkatan yang signifikan dalam otonomi pengguna kursi roda dengan gangguan mobilitas.
-  Penelitian ini tidak hanya berkontribusi pada bidang teknologi bantu, tetapi juga berpotensi
-  menjadi model untuk inovasi masa depan dalam solusi mobilitas bagi individu dengan berbagai
-  disabilitas fisik.
+  Penelitian ini menghadirkan pendekatan baru untuk meningkatkan mobilitas bagi pasien ALS dengan mengembangkan sistem kontrol pergerakan kursi roda menggunakan MediaPipe, yang berfokus pada pengenalan gerakan mata, dan diimplementasikan pada platform Intel NUC. Studi ini didorong oleh tantangan yang dihadapi oleh pasien ALS, yang meskipun kehilangan mobilitas fisik, tetap dapat menggerakkan mata. Sistem yang diusulkan bertujuan untuk memberikan kemandirian yang lebih besar dan peningkatan kualitas hidup bagi individu tersebut. Metodologi penelitian ini terdiri dari beberapa komponen kunci: pengambilan dan pengolahan gambar mata, ekstraksi fitur yang relevan, estimasi dan klasifikasi posisi mata, serta eksekusi sistem kontrol pada \textit{Next Unit of Computing (NUC)}. Dengan memanfaatkan MediaPipe untuk pengenalan gestur secara \emph{realtime} dan kemampuan komputasi Intel NUC, studi ini menjanjikan peningkatan yang signifikan dalam otonomi pengguna kursi roda dengan gangguan mobilitas.  Model klasifikasi menunjukkan kinerja yang sangat baik berdasarkan hasil evaluasi confusion matrix, dengan akurasi, \emph{precision, recall, dan f-1 score} sebesar 100\%. Performa model tetap stabil pada jarak 30 hingga 90 cm, dengan akurasi tertinggi pada jarak 30 dan 50 cm (100\%) dan di berbagai tingkat pencahayaan, dengan akurasi tertinggi pada pencahayaan 131 Lux (100\%). Sistem mempertahankan FPS yang stabil pada laptop dan Intel NUC, menunjukkan kinerja yang lebih baik pada laptop. Waktu respons motor rata-rata untuk perintah "Kanan," "Kiri," dan "Mundur" di bawah 0,25 detik, sedangkan untuk perintah "Maju" dan "Stop" sekitar 0,43 detik. Motor kursi roda menunjukkan waktu output yang konsisten di setiap kelas perintah, dengan standar deviasi terendah pada perintah "Maju" (0,117), menunjukkan keandalan sistem dalam memberikan respons yang stabil dan konsisten. Penelitian ini tidak hanya berkontribusi pada bidang teknologi bantu, tetapi juga berpotensi menjadi model untuk inovasi masa depan dalam solusi mobilitas bagi individu dengan berbagai disabilitas fisik.
 
 \end{abstract}
 
@@ -31,6 +16,6 @@
 \begin{IEEEkeywords}
 
   % Ubah kata-kata berikut sesuai dengan kata kunci dari penelitian.
-  Teknologi Bantu, Pengenalan Gerakan, Kontrol Kursi Roda
+  Teknologi Bantu, Pengenalan Gerakan, Kontrol Kursi Roda, MediaPipe, NUC
 
 \end{IEEEkeywords}

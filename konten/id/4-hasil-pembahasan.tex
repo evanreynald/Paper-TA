@@ -5,7 +5,33 @@
 % Ubah paragraf-paragraf pada bagian ini sesuai dengan yang diinginkan.
 \subsection{Pengujian Performa Model dengan menggunakan Variasi Jarak}
 
-Pada skenario pengujian selanjutnya, model diuji berdasarkan beberapa variasi jarak. Pengujian jarak berguna untuk mengetahui performa dan tingkat akurasi model jika input citra diambil dari jarak yang berbeda-beda. Hal ini perlu diuji karena semakin jauh jarak pendeteksi citra, maka semakin kecil data visual citra yang diperoleh. Variasi jarak yang digunakan adalah 30 sentimeter, 50 sentimeter, 70 sentimeter, 90 sentimeter, dan 110 sentimeter. 
+Pada skenario pengujian selanjutnya, model diuji berdasarkan beberapa variasi jarak. Pengujian jarak berguna untuk mengetahui performa dan tingkat akurasi model jika input citra diambil dari jarak yang berbeda-beda. Hal ini perlu diuji karena semakin jauh jarak pendeteksi citra, maka semakin kecil data visual citra yang diperoleh. Hasil validasi jarak yang digunakan adalah 30 sentimeter yang dapat dilihat pada Tabel \ref{tb:30cm}, 50 sentimeter pada Tabel \ref{tb:50cm}, 70 sentimeter pada Tabel \ref{tb:70cm}, dan 90 sentimeter pada Tabel \ref{tb:90cm}. Untuk contoh dataset variasi pengujian jarak dapat dilihat pada Gambar \ref{fig:Variasi Jarak Kamera}.
+
+\begin{figure}[H]
+  \centering
+  \subfloat[30 sentimeter]{
+    \includegraphics[width=0.2\textwidth]{gambar/bab4/30.jpg}
+    %\caption{30 sentimeter}
+    \label{fig:imagea}}
+    \hfil 
+  \subfloat[50 sentimeter]{
+    \includegraphics[width=0.2\textwidth]{gambar/bab4/50.jpg}
+    %\caption{50 sentimeter}
+    \label{fig:imageb}}
+
+  \subfloat[70 sentimeter]{
+    \includegraphics[width=0.2\textwidth]{gambar/bab4/70.jpg}
+    %\caption{70 sentimeter}
+    \label{fig:imagec}}
+    \hfil
+  \subfloat[90 sentimeter]{
+    \includegraphics[width=0.2\textwidth]{gambar/bab4/90.jpg}
+    %\caption{90 sentimeter}
+    \label{fig:imaged}}
+
+  \caption{Variasi Jarak Kamera}
+  \label{fig:Variasi Jarak Kamera}
+\end{figure}
 
 \begin{table}[ht]
   \caption{Hasil Validasi Nilai Model dengan Jarak 30 cm}
@@ -55,7 +81,7 @@ Pada skenario pengujian selanjutnya, model diuji berdasarkan beberapa variasi ja
   \end{tabular}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[H]
   \caption{Hasil Validasi Nilai Model dengan Jarak 90 cm}
   \label{tb:90cm}
   \centering
@@ -73,7 +99,28 @@ Pada skenario pengujian selanjutnya, model diuji berdasarkan beberapa variasi ja
     
 \subsection{Pengujian Performa Model dengan menggunakan Variasi Pencahayaan}
 
-Pada sistem kontrol kursi roda berbasis \emph{gesture} mata, variasi pencahayaan memiliki pengaruh signifikan terhadap performa model deteksi. Tujuan dari pengujian ini adalah untuk mengevaluasi tingkat keberhasilan dan ketidakberhasilan model dalam mendeteksi gerakan mata pada tiga kondisi pencahayaan, seperti pencahayaan redup (35 Lux), normal (77 Lux), dan terang (131 Lux).
+Pada sistem kontrol kursi roda berbasis \emph{gesture} mata, variasi pencahayaan memiliki pengaruh signifikan terhadap performa model deteksi. Tujuan dari pengujian ini adalah untuk mengevaluasi tingkat keberhasilan dan ketidakberhasilan model dalam mendeteksi gerakan mata pada tiga kondisi pencahayaan, seperti pencahayaan redup (35 Lux) yang dapat dilihat pada Tabel \ref{tb:lux35}, normal (77 Lux) pada Tabel \ref{tb:lux55}, dan terang (131 Lux) pada Tabel \ref{tb:lux131}. Untuk variasi pengujian pencahayaan dapat dilihat pada Gambar \ref{fig:Variasi Pencahayaan}.
+
+\begin{figure}[H]
+  \centering
+  \subfloat[35 Lux]{
+    \includegraphics[width=0.15\textwidth]{gambar/bab4/33.png}
+    %\caption{30 sentimeter}
+    \label{fig:imageaa}}
+  \hfil
+  \subfloat[55 Lux]{
+    \includegraphics[width=0.15\textwidth]{gambar/bab4/55.png}
+    %\caption{50 sentimeter}
+    \label{fig:imagebb}}
+
+  \subfloat[131 Lux]{
+    \includegraphics[width=0.15\textwidth]{gambar/bab4/131.png}
+    %\caption{70 sentimeter}
+    \label{fig:imagecc}}
+
+  \caption{Variasi Pencahayaan}
+  \label{fig:Variasi Pencahayaan}
+\end{figure}
 
 \begin{table}[ht]
   \caption{Pengujian Model dengan Pencahayaan 35 Lux}
@@ -107,7 +154,7 @@ Pada sistem kontrol kursi roda berbasis \emph{gesture} mata, variasi pencahayaan
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
   \caption{Pengujian Model dengan Pencahayaan 131 Lux}
   \label{tb:lux131} 
   \centering
@@ -125,9 +172,9 @@ Pada sistem kontrol kursi roda berbasis \emph{gesture} mata, variasi pencahayaan
 
 \subsection{Pengujian Performa \emph{Frame Per Second} (FPS) pada Sistem Kontrol Kursi Roda}
 
-Pengujian performa \emph{Frame Per Second} (FPS) bertujuan untuk mengevaluasi kecepatan sistem dalam memproses gerakan mata secara real-time untuk mengontrol kursi roda. FPS merupakan indikator penting dalam menilai kelancaran dan responsivitas sistem, terutama dalam aplikasi yang memerlukan deteksi gerakan dan pengambilan keputusan yang cepat.
+Pengujian performa \emph{Frame Per Second} (FPS) bertujuan untuk mengevaluasi kecepatan sistem dalam memproses gerakan mata secara real-time untuk mengontrol kursi roda. FPS merupakan indikator penting dalam menilai kelancaran dan responsivitas sistem, terutama dalam aplikasi yang memerlukan deteksi gerakan dan pengambilan keputusan yang cepat. Hasil pengujian FPS pada laptop dan NUC dapat dilihat pada Tabel \ref{tb:fps}.
 
-\begin{table}[ht]
+\begin{table}[H]
   \caption{Hasil Performa FPS pada Laptop dan NUC}
   \label{tb:fps}
   \centering
@@ -145,9 +192,9 @@ Pengujian performa \emph{Frame Per Second} (FPS) bertujuan untuk mengevaluasi ke
 
 \subsection{Pengujian Waktu dari \emph{Inference Time} pada Model ke \emph{Response Time} pada Motor Kursi Roda}
 
-Pengujian waktu dari \emph{Inference Time} pada model ke \emph{Response Time} pada motor kursi roda bertujuan untuk mengevaluasi seberapa cepat sistem kontrol kursi roda berbasis gerakan mata dapat merespons perintah dari pengguna. \emph{Inference Time} mengukur waktu yang dibutuhkan oleh model untuk mendeteksi dan mengklasifikasikan gerakan mata, sementara \emph{Response Time} mengukur waktu yang diperlukan motor kursi roda untuk mulai bergerak setelah menerima sinyal dari model.
+Pengujian waktu dari \emph{Inference Time} pada model ke \emph{Response Time} pada motor kursi roda bertujuan untuk mengevaluasi seberapa cepat sistem kontrol kursi roda berbasis gerakan mata dapat merespons perintah dari pengguna. \emph{Inference Time} mengukur waktu yang dibutuhkan oleh model untuk mendeteksi dan mengklasifikasikan gerakan mata, sementara \emph{Response Time} mengukur waktu yang diperlukan motor kursi roda untuk mulai bergerak setelah menerima sinyal dari model. Hasil pengujian waktu dari \emph{Inference Time} dan \emph{Response Time} dapat dilihat pada Tabel \ref{tb:response}.
 
-\begin{table}[ht]
+\begin{table}[H]
   \caption{Hasil Pengujian Inference Time dan Response Time}
   \label{tb:response}
   \centering
@@ -165,9 +212,9 @@ Pengujian waktu dari \emph{Inference Time} pada model ke \emph{Response Time} pa
 
 \subsection{Pengujian Kestabilan pada Motor Kursi Roda}
 
-Pengujian kestabilan pada motor kursi roda bertujuan untuk memastikan bahwa waktu output yang dijalankan oleh motor tetap stabil untuk setiap input yang diberikan oleh pengguna melalui sistem kontrol gerakan mata. Pengujian ini melibatkan pengukuran waktu yang dibutuhkan oleh motor untuk merespons setiap perintah gerakan mata dan memastikan bahwa waktu respons tersebut tetap konsisten di berbagai kondisi input.
+Pengujian kestabilan pada motor kursi roda bertujuan untuk memastikan bahwa waktu output yang dijalankan oleh motor tetap stabil untuk setiap input yang diberikan oleh pengguna melalui sistem kontrol gerakan mata. Pengujian ini melibatkan pengukuran waktu yang dibutuhkan oleh motor untuk merespons setiap perintah gerakan mata dan memastikan bahwa waktu respons tersebut tetap konsisten di berbagai kondisi input. Hasil pengujian kestabilan motor dapat dilihat pada Tabel \ref{tb:stabil}.
 
-\begin{table}[ht]
+\begin{table}[H]
   \caption{Hasil Pengujian Kestabilan Motor}
   \label{tb:stabil}
   \centering

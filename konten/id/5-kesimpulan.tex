@@ -12,14 +12,14 @@ Berdasarkan hasil pengujian yang telah dilakukan dan dianalisa pada bab sebelumn
 
   \item Model klasifikasi yang digunakan menunjukkan kinerja yang sangat baik berdasarkan hasil evaluasi confusion matrix. Model dapat mengenali berbagai gerakan mata dengan cepat dan konsisten, memastikan kontrol kursi roda yang andal.
 
-  \item Model tetap memiliki performa yang stabil pada jarak 30 hingga 90 cm. Pada jarak 50 cm, model memiliki akurasi tertinggi yaitu 100\%.
-  
-  \item Model memiliki kinerja yang cukup baik di berbagai tingkat pencahayaan, dengan akurasi tertinggi 100\% pada pencahayaan 131 Lux.
-  
+  \item Model tetap memiliki performa yang stabil pada jarak 30 hingga 90 cm. Pada jarak 30 dan 50 cm, model memiliki akurasi tertinggi yaitu 100\%. Model menunjukkan bahwa semakin dekat jarak mata dengan kamera, semakin tinggi akurasi yang dihasilkan.
+
+  \item Model memiliki kinerja yang cukup baik di berbagai tingkat pencahayaan, dengan akurasi tertinggi 100\% pada pencahayaan 131 Lux. Hal ini menunjukkan bahwa cahaya memiliki pengaruh yang signifikan terhadap akurasi model, dengan peningkatan akurasi pada pencahayaan yang lebih tinggi.
+
   \item Pengujian performa FPS menunjukkan bahwa sistem dapat mempertahankan FPS yang stabil pada laptop (10,415 - 13,972 FPS) dan Intel NUC (8,405 - 12,448 FPS). Variasi ini memastikan bahwa sistem tetap responsif terhadap gerakan mata pengguna.
   
-  \item Waktu rata-rata motor untuk perintah "Kanan" adalah 0,4337 detik, menunjukkan stabilitas dan konsistensi dalam merespons perintah. Untuk perintah lainnya seperti "Kiri," "Maju," "Mundur," dan "Stop," waktu respons rata-rata di bawah 0,25 detik, menunjukkan sistem yang responsif.
+  \item Waktu respons rata-rata motor untuk perintah "Kanan," "Kiri," dan "Mundur" di bawah 0,25 detik, menunjukkan sistem yang responsif. Sedangkan untuk perintah "Maju" adalah 0,4337 detik dan untuk perintah "Stop" adalah 0,4318, menunjukkan waktu respons yang lebih tinggi karena perintah tersebut memerlukan waktu yang lebih lama untuk dieksekusi.
   
-  \item Motor kursi roda memiliki waktu output yang konsisten di setiap kelas perintah, dengan variabilitas yang relatif sempit. Hal ini menunjukkan bahwa sistem kontrol kursi roda mampu memberikan waktu respons yang stabil dan konsisten.
+  \item Motor kursi roda memiliki waktu output yang konsisten di setiap kelas perintah, dengan variabilitas yang relatif sempit dengan nilai standar deviasi untuk kelas "Kanan" sebesar 0,408, kelas "Kiri" sebesar 0,371, kelas "Maju" sebesar 0,117, kelas "Mundur" sebesar 0,156, dan kelas "Stop" sebesar 0,361. Di antara semua kelas perintah, kelas maju memiliki nilai yang paling stabil, menunjukkan keandalan sistem dalam memberikan respons stabil dan konsisten saat perintah maju diberikan.
 
 \end{enumerate}
