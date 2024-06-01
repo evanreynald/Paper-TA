@@ -21,3 +21,6 @@
 *.bcf
 *.blx.bib
 # END: LaTeX
+
+#gambar
+gambar/
