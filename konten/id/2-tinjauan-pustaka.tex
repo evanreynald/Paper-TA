@@ -3,7 +3,7 @@
 \label{sec:tinjauanpustaka}
 
 \subsection{Kursi Roda Elektrik}
-Kursi roda adalah perangkat yang dioperasikan secara manual atau digerakkan dengan tenaga yang dirancang terutama untuk digunakan oleh individu dengan disabilitas mobilitas untuk tujuan utama bergerak di dalam ruangan, atau di dalam dan di luar ruangan.  Individu dengan disabilitas mobilitas harus diizinkan menggunakan kursi roda dan alat bantu mobilitas bertenaga manual, misalnya alat bantu jalan, kruk, tongkat, atau perangkat serupa lainnya yang dirancang untuk digunakan oleh individu dengan disabilitas mobilitas, di area mana pun yang terbuka untuk lalu lintas pejalan kaki \cite{ADA_2023}.
+Kursi roda adalah perangkat yang dioperasikan secara manual atau digerakkan dengan tenaga yang dirancang terutama untuk digunakan oleh individu dengan disabilitas mobilitas untuk tujuan utama bergerak di dalam ruangan, atau di dalam dan di luar ruangan.  Individu dengan disabilitas mobilitas harus diizinkan menggunakan kursi roda dan alat bantu mobilitas bertenaga manual, misalnya alat bantu jalan, kruk, tongkat, atau perangkat serupa lainnya yang dirancang untuk digunakan oleh individu dengan disabilitas mobilitas, di area mana pun yang terbuka untuk lalu lintas pejalan kaki \cite{ADA_2023}. Kursi roda elektrik dapat dilihat pada Gambar \ref{fig:kursiroda}.
 
 %Gambar 2.1
 % Contoh input gambar
@@ -11,30 +11,30 @@ Kursi roda adalah perangkat yang dioperasikan secara manual atau digerakkan deng
   \centering
 
   % Ubah dengan nama file gambar dan ukuran yang akan digunakan
-  \includegraphics[scale=0.1]{gambar/bab3/kursi.jpeg}
+  \includegraphics[scale=0.15]{gambar/bab3/wheel.jpeg}
 
   % Ubah dengan keterangan gambar yang diinginkan
   \caption{Kursi Roda Elektrik}
   \label{fig:kursiroda}
 \end{figure}
 
-\subsection{\emph{Eye Gesture}}
+\subsection{Eye Gesture}
 
-\textit{Eye gesture} atau gerakan mata mengacu pada pergerakan mata, seperti tatapan mata, gerakan mata, dan ekspresi wajah, yang memainkan peran penting dalam komunikasi dan interaksi manusia \cite{vanni_2022}. Perangkat pelacak mata telah digunakan untuk mempelajari berbagai aspek gerakan mata, termasuk pengaruh faktor sosial, faktor fisik, dan hubungan antara gerakan mata dan ucapan. Perangkat ini dapat merekam gerakan mata partisipan dengan kamera refleks kornea dan menganalisis gerakan tubuh dan gerakan mata dengan akurasi temporal\cite{gullberg_kita_2009}.
+\textit{Eye gesture} atau pose mata mengacu pada pergerakan mata, seperti tatapan mata, pose mata, dan ekspresi wajah, yang memainkan peran penting dalam komunikasi dan interaksi manusia \cite{vanni_2022}. Perangkat pelacak mata telah digunakan untuk mempelajari berbagai aspek pose mata, termasuk pengaruh faktor sosial, faktor fisik, dan hubungan antara pose mata dan ucapan. Perangkat ini dapat merekam pose mata partisipan dengan kamera refleks kornea dan menganalisis pose tubuh dan pose mata dengan akurasi temporal \cite{gullberg_kita_2009}. Contoh pose mata dapat dilihat pada Gambar \ref{fig:gaze}.
 
 % Gambar 2.2
 \begin{figure} [ht] \centering
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.5]{gambar/bab3/gaze.png}
     % Keterangan gambar yang diinputkan
-    \caption{Gestur Mata}
+    \caption{Pose Mata}
     % Label referensi dari gambar yang diinputkan
     \label{fig:gaze}
 \end{figure}
 
 \subsection{MediaPipe Face Mesh}
 
-MediaPipe Face Mesh adalah solusi pendeteksi \textit{landmark} wajah yang memperkirakan 468 \textit{landmark} wajah 3D secara real-time, bahkan pada perangkat seluler. Solusi ini menggunakan \textit{pipeline} dari dua jaringan saraf untuk mengidentifikasi koordinat 3D landmark wajah dari gambar 2D. Jaringan pertama, BlazeFace, menghitung lokasi wajah dari gambar penuh, sementara jaringan kedua beroperasi pada wilayah yang dipotong untuk mengidentifikasi lokasi \textit{landmark} \cite{mediapipe_2020}. Teknologi ini memiliki berbagai aplikasi, termasuk deteksi masker wajah, kontrol komputer bebas genggam, dan gerakan yang menyertai ucapan \cite{thaman_2022}.
+MediaPipe Face Mesh adalah solusi pendeteksi \textit{landmark} wajah yang memperkirakan 468 \textit{landmark} wajah 3D secara real-time, bahkan pada perangkat seluler. Solusi ini menggunakan \textit{pipeline} dari dua jaringan saraf untuk mengidentifikasi koordinat 3D landmark wajah dari gambar 2D. Jaringan pertama, BlazeFace, menghitung lokasi wajah dari gambar penuh, sementara jaringan kedua beroperasi pada wilayah yang dipotong untuk mengidentifikasi lokasi \textit{landmark} \cite{mediapipe_2020}. Teknologi ini memiliki berbagai aplikasi, termasuk deteksi masker wajah, kontrol komputer bebas genggam, dan gerakan yang menyertai ucapan \cite{thaman_2022}. Visualisasi MediaPipe Face Mesh dapat dilihat pada Gambar \ref{fig:facemesh}.
 
 % Gambar 2.3
 \begin{figure} [ht] \centering
@@ -46,7 +46,7 @@ MediaPipe Face Mesh adalah solusi pendeteksi \textit{landmark} wajah yang memper
     \label{fig:facemesh}
 \end{figure}
 
-\subsection{\emph{Convolutional Neural Network} (CNN)}
+\subsection{Convolutional Neural Network (CNN)}
 
 \emph{Convolutional Neural Network} (CNN) adalah jenis jaringan syaraf tiruan yang digunakan terutama untuk pengenalan dan pemrosesan gambar. Ini adalah bagian dari pembelajaran mesin dan dirancang khusus untuk mengidentifikasi dan mengenali objek dalam gambar, serta untuk tugas-tugas seperti klasifikasi objek dan pengenalan pola \cite{arm_2023}. 
 
@@ -57,12 +57,12 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.2]{gambar/cnn.jpg}
     % Keterangan gambar yang diinputkan
-    \caption{Arsitektur pada \emph{Convolutional Neural Network}}
+    \caption{Arsitektur \emph{Convolutional Neural Network}}
     % Label referensi dari gambar yang diinputkan
     \label{fig:arsitektur cnn}
 \end{figure}
 
-\subsection{\emph{Confusion Matrix}}
+\subsection{Confusion Matrix}
 
 \emph{Confusion Matrix} adalah alat yang digunakan untuk mengevaluasi kinerja model klasifikasi dalam pembelajaran mesin. Tabel ini memberikan gambaran mendetail tentang bagaimana model klasifikasi bekerja, menunjukkan hubungan antara prediksi model dengan nilai sebenarnya. \emph{Confusion Matrix} adalah representasi tabel yang terdiri dari empat komponen utama, yaitu \emph{True Positive} (TP), \emph{False Positive} (FP), \emph{True Negative} (TN), dan \emph{False Negative} (FN). Setiap komponen memiliki makna yang spesifik dalam konteks prediksi \cite{provost2013data}. Visualisasi \emph{confusion matrix} dapat dilihat pada Gambar \ref{fig:confusion}.
 
@@ -71,12 +71,12 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
     % Nama dari file gambar yang diinputkan
     \includegraphics[scale=0.3]{gambar/bab2/confusion.png}
     % Keterangan gambar yang diinputkan
-    \caption{Visualisasi \emph{confusion matrix}}
+    \caption{Visualisasi \emph{Confusion Matrix}}
     % Label referensi dari gambar yang diinputkan
     \label{fig:confusion}
 \end{figure}
 
-\subsection{\emph{Accuracy}}
+\subsection{Accuracy}
 \label{subsec:acc_klasifikasi}
 
 \emph{Accuracy} adalah ukuran kinerja yang menunjukkan seberapa tepat model dapat mengklasifikasikan data uji secara benar. Dalam konteks ini, akurasi adalah rasio antara prediksi yang benar (TP dan TN) dengan total jumlah data. Dengan kata lain, akurasi mengukur seberapa dekat nilai prediksi dengan nilai aktual. Nilai \emph{accuracy} dapat diperoleh menggunakan Persamaan \ref{eq:acc}. 
@@ -86,7 +86,7 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
   Accuracy=\frac{TP+TN}{TP+TN+FP+FN}
 \end{equation}
 
-\subsection{\emph{Precision}}
+\subsection{Precision}
 \label{subsec:prec_klasifikasi}
 
 \emph{Precision} adalah ukuran kinerja yang menunjukkan tingkat keakuratan data yang diminta dibandingkan dengan hasil prediksi yang diberikan oleh model. Dalam konteks ini, presisi adalah rasio antara prediksi positif yang benar (TP) dengan total hasil prediksi positif (TP dan FP). Nilai \emph{precision} dapat diperoleh dengan Persamaan \ref{eq:prec}.
@@ -96,7 +96,7 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
   Precision=\frac{TP}{TP+FP}
 \end{equation}
 
-\subsection{\emph{Recall}}
+\subsection{Recall}
 \label{subsec:recall_klasifikasi}
 
 \emph{Recall} adalah ukuran kinerja yang menunjukkan seberapa berhasil model dalam menemukan kembali suatu informasi. Dalam konteks ini, recall adalah rasio antara prediksi positif yang benar (TP) dengan total jumlah data aktual positif (TP dan FN). Dengan demikian, nilai recall dapat dihitung menggunakan Persamaan \ref{eq:recall}.
@@ -106,7 +106,7 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
   Recall=\frac{TP}{TP+FN}
 \end{equation}
 
-\subsection{\emph{F1-Score}}
+\subsection{F1-Score}
 \label{subsec:score_klasifikasi}
 
 \emph{F1-Score} adalah nilai antara nol (0) hingga satu (1) yang diperoleh dari rata-rata harmonis (\emph{harmonic mean}) antara nilai \emph{precision} dan nilai \emph{recall}. Oleh karena itu, nilai \emph{F1-Score} dapat dihitung menggunakan Persamaan \ref{eq:score}.
@@ -116,6 +116,6 @@ Arsitektur pada CNN terdiri dari tiga bagian, yaitu input, \emph{feature learnin
   F{1}{-}Score=\frac{2 \times Precision \times Recall}{Precision+Recall}
 \end{equation}
 
-\subsection{\emph{Next Unit of Computing} (NUC)}
+\subsection{Next Unit of Computing (NUC)}
 
-Intel NUC, atau Next Unit of Computing, adalah perangkat komputer mini yang memiliki daya komputasi tinggi dalam bentuk yang kompak. Dengan dimensi yang kecil, NUC tetap mampu menyediakan kinerja yang mumpuni untuk berbagai kebutuhan komputasi. Model-model NUC terbaru dilengkapi dengan prosesor Intel Core generasi terbaru, mendukung grafis 4K, dan memiliki kemampuan konektivitas yang luas seperti Thunderbolt, USB, HDMI, dan Ethernet. Keunggulan ini menjadikannya pilihan ideal untuk aplikasi komputasi tepi (edge computing) dan aplikasi yang memerlukan daya komputasi tinggi dalam ruang yang terbatas \cite{intel_nuc}.
+Intel NUC, atau Next Unit of Computing, adalah perangkat komputer mini yang memiliki daya komputasi tinggi dalam bentuk yang kompak. Dengan dimensi yang kecil, NUC tetap mampu menyediakan kinerja yang mumpuni untuk berbagai kebutuhan komputasi. Model-model NUC terbaru dilengkapi dengan prosesor Intel Core generasi terbaru, mendukung grafis 4K, dan memiliki kemampuan konektivitas yang luas seperti Thunderbolt, USB, HDMI, dan Ethernet. Keunggulan ini menjadikannya pilihan ideal untuk aplikasi komputasi tepi \emph{(edge computing)} dan aplikasi yang memerlukan daya komputasi tinggi dalam ruang yang terbatas \cite{intel_nuc}.

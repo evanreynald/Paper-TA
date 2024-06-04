@@ -2,14 +2,14 @@
 \section{Desain dan Implementasi}
 \label{sec:desaindanimplementasi}
 
-Pada penelitian ini, diintegrasikan teknologi visi komputer dengan sistem tertanam agar dapat mengontrol gerak kursi roda menggunakan gerakan mata (\emph{eye gesture}). Sistem dibuat menggunakan \emph{framework} MediaPipe Facemesh. Berikut merupakan blok diagram sistem yang diimplementasikan dalam penelitian ini:
+Pada penelitian ini, diintegrasikan teknologi visi komputer dengan sistem tertanam agar dapat mengontrol gerak kursi roda menggunakan pose mata (\emph{eye gesture}). \emph{Software} dibuat menggunakan \emph{framework} MediaPipe Face Mesh dan CNN. Gambar \ref{fig:sistem} merupakan blok diagram \emph{software} yang diimplementasikan dalam penelitian ini.
 
 %Gambar 3.1
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/paper1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Blok Diagram Sistem}
+  \caption{Blok Diagram \emph{Software}}
   % Label referensi dari gambar yang diinputkan
   \label{fig:sistem}
 \end{figure}
@@ -19,7 +19,7 @@ Pada penelitian ini, diintegrasikan teknologi visi komputer dengan sistem tertan
 Dalam mengerjakan penelitian ini, langkah pertama yang dilakukan adalah pengambilan citra menggunakan kamera atau sumber gambar lainnya. Citra yang diambil harus cukup jelas dan terfokus pada area wajah agar fitur mata dapat diidentifikasi dengan akurat. Tahapan akuisisi data dapat dilihat pada Gambar \ref{fig:akuisisi}.
 
 %Gambar 3.1
-\begin{figure} [ht] \centering
+\begin{figure} [H] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/paper2.png}
   % Keterangan gambar yang diinputkan
@@ -28,32 +28,48 @@ Dalam mengerjakan penelitian ini, langkah pertama yang dilakukan adalah pengambi
   \label{fig:akuisisi}
 \end{figure}
 
-Ekstrasi fitur mata adalah proses yang melibatkan penggunaan bahasa pemrograman Python, \emph{library} OpenCV, dan \emph{framework} MediaPipe. Dalam konteks ini, Mediapipe berperan penting dalam memperoleh informasi titik \emph{landmark} yang signifikan terhadap objek yang diidentifikasi. \emph{Landmarks} inilah yang menjadi dasar pembentukan representasi visual dari pose tersebut.
+Ekstrasi fitur mata adalah proses pemilihan fitur yang signifikan dari citra mata yang diambil. \emph{Landmark} fitur mata yang digunakan dapat dilihat pada Tabel \ref{tbl:titik keypoints}.
 
-Pengenalan pose adalah proses yang melibatkan penggunaan bahasa pemrograman Python, \emph{library} OpenCV, dan \emph{framework} MediaPipe. Dalam konteks ini, Mediapipe berperan penting dalam memperoleh informasi titik \emph{landmark} yang signifikan terhadap objek yang diidentifikasi. \emph{Landmarks} inilah yang menjadi dasar pembentukan representasi visual dari pose tersebut.
+  \begin{table}[H]
+    \caption{Landmark yang Relevan pada Tahap Estimasi Pose Mata}
+    \label{tbl:titik keypoints}
+    \centering
+    \begin{tabular}{|l|c|}
+    \hline
+    Nama        & \emph{Landmark}                                                                           \\ \hline
+    LEFT\_EYE   & \begin{tabular}[c]{@{}l@{}}362,382,381,380,374,373,390,249,\\ 263,466,388,387,386,385,384,398\end{tabular} \\ \hline
+    \multirow{2}{*}{LEFT\_IRIS} & \multirow{2}{*}{474,475,476,477}                                                               \\
+                            &                                                                                     \\ \hline
+    RIGHT\_EYE  & \begin{tabular}[c]{@{}l@{}}33,7,163,144,145,153,154,155,\\ 133,173,157,158,159,160,161,246\end{tabular}                                                                            \\ \hline
+    \multirow{2}{*}{RIGHT\_IRIS} & \multirow{2}{*}{469,470,471,472}                                                               \\
+                            &                                                                                     \\ \hline
+    \end{tabular}
+  \end{table}
 
-Proses estimasi posisi mata dilakukan dengan mendeteksi keberadaan mata pada citra yang didapatkan. Setelah posisi mata didapatkan, selanjutnya dilakukan deteksi untuk 40 titik landmark pada bagian kelopak mata dan iris mata. Untuk melakukan estimasi posisi mata, beberapa titik \emph{landmark} akan digambarkan dan diwarnai dengan warna yang unik untuk membantu membedakan setiap bagian mata seperti yang dapat dilihat pada Gambar \ref{fig:estimasi}.
+Pengenalan pose adalah proses yang melibatkan penggunaan \emph{library} OpenCV, \emph{framework} MediaPipe, dan CNN. Dalam konteks ini, Mediapipe berperan penting dalam memperoleh informasi titik \emph{landmark} yang signifikan terhadap objek yang diidentifikasi. \emph{Landmarks} inilah yang menjadi dasar pembentukan representasi visual dari pose tersebut.
+
+Proses estimasi pose mata dilakukan dengan mendeteksi keberadaan mata pada citra yang didapatkan. Setelah pose mata didapatkan, selanjutnya dilakukan deteksi untuk 40 titik landmark pada bagian kelopak mata dan iris mata. Untuk melakukan estimasi pose mata, beberapa titik \emph{landmark} akan digambarkan dan diwarnai dengan warna yang unik untuk membantu membedakan setiap bagian mata seperti yang dapat dilihat pada Gambar \ref{fig:estimasi}.
 
 %Gambar 3.1
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/bab4/30.jpg}
   % Keterangan gambar yang diinputkan
-  \caption{Estimasi Posisi Mata menggunakan MediaPipe}
+  \caption{Estimasi Pose Mata menggunakan MediaPipe}
   % Label referensi dari gambar yang diinputkan
   \label{fig:estimasi}
 \end{figure}
 
 \subsection{Pengolahan Data}
 
-Setelah proses estimasi posisi mata selesai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi ke dalam dataset. Dataset ini akan memiliki 3 kelas berbeda, mewakili perintah untuk bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
+Setelah proses estimasi pose mata selesai, maka langkah selanjutnya ada mengelompokkan citra-citra hasil estimasi ke dalam dataset. Dataset ini akan memiliki 3 kelas berbeda, mewakili perintah untuk bergerak ke kanan, bergerak ke kiri, dan berhenti. Kelas ini mewakili perintah dasar untuk menggerakkan kursi roda. 
 
 Untuk meningkatkan performa dan akurasi, maka dataset melewati proses optimasi menggunakan algoritma \emph{Convolutional Neural Network} (CNN). Langkah ini melibatkan penyesuaian dan peningkatan model CNN untuk meningkatkan akurasi dan efisiensi dalam deteksi mata. Untuk model CNN yang dipakai pada penelitian ini dapat dilihat pada Gambar \ref{fig:3dlayer}.
 
 %Gambar 3.1
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.2]{gambar/bab3/3dlayer.png}
+  \includegraphics[height=2.99cm ,width=7cm]{gambar/bab3/3dlayer.png}
   % Keterangan gambar yang diinputkan
   \caption{Layer CNN 3 Dimensi}
   % Label referensi dari gambar yang diinputkan
@@ -64,18 +80,18 @@ Sebelum dataset di-\emph{training} menggunakan \emph{layer} CNN, dilakukan beber
 
 \subsection{Implementasi ke NUC}
 
-Implementasi sistem deteksi gerakan mata ke Intel NUC dimulai dengan menginstal pustaka perangkat lunak yang diperlukan, seperti Python, OpenCV, dan Mediapipe, ke dalam perangkat tersebut. Model yang telah dilatih kemudian diintegrasikan dengan program kontrol kursi roda, menghubungkan input dari kamera ke sinyal keluaran untuk motor kursi roda. Intel NUC terhubung ke kamera melalui port USB dan berkomunikasi dengan motor kursi roda melalui protokol serial. Sistem ini dioptimalkan untuk mencapai keseimbangan antara kecepatan dan akurasi, dengan pengaturan parameter model dan komunikasi sehingga memungkinkan kendali kursi roda berbasis gerakan mata yang akurat dan responsif.
+Implementasi sistem deteksi pose mata ke Intel NUC dimulai dengan menginstal pustaka perangkat lunak yang diperlukan, seperti Python, OpenCV, dan Mediapipe, ke dalam perangkat tersebut. Model yang telah dilatih kemudian diintegrasikan dengan program kontrol kursi roda, menghubungkan input dari kamera ke sinyal keluaran untuk motor kursi roda. Intel NUC terhubung ke kamera melalui port USB dan berkomunikasi dengan motor kursi roda melalui protokol serial. Sistem ini dioptimalkan untuk mencapai keseimbangan antara kecepatan dan akurasi, dengan pengaturan parameter model dan komunikasi sehingga memungkinkan kendali kursi roda berbasis pose mata yang akurat dan responsif.
 
-\subsection{Alur \textit{Hardware} Sistem}
+\subsection{Blok Diagram \textit{Hardware}}
+
+Pada Gambar \ref{fig:aluralat}, ditunjukkan bahwa kamera akan mengambil citra dari mata pengguna. Citra tersebut kemudian akan diproses oleh Intel NUC menggunakan model CNN yang telah dilatih sebelumnya. Hasil dari proses tersebut akan menghasilkan perintah pose yang akan dikirimkan ke motor kursi roda melalui protokol Wi-Fi. Motor kursi roda akan menerima perintah tersebut dan menggerakkan kursi roda sesuai dengan perintah yang diberikan.
 
 %Gambar 3.2
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/bab3/aluralat.png}
   % Keterangan gambar yang diinputkan
-  \caption{Alur \emph{Hardware} Sistem}
+  \caption{Blok Diagram \emph{Hardware}}
   % Label referensi dari gambar yang diinputkan
   \label{fig:aluralat}
 \end{figure}
-
-Pada Gambar \ref{fig:aluralat} ditunjukkan bahwa kamera akan mengambil citra dari mata pengguna. Citra tersebut kemudian akan diproses oleh Intel NUC menggunakan model CNN yang telah dilatih sebelumnya. Hasil dari proses tersebut akan menghasilkan perintah gerakan yang akan dikirimkan ke motor kursi roda melalui protokol Wi-Fi. Motor kursi roda akan menerima perintah tersebut dan menggerakkan kursi roda sesuai dengan perintah yang diberikan.

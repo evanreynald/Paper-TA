@@ -8,18 +8,18 @@ Berdasarkan hasil pengujian yang telah dilakukan dan dianalisa pada bab sebelumn
 
 \begin{enumerate}
 
-  \item Penelitian ini berhasil mengembangkan sistem kontrol kursi roda berbasis gestur mata menggunakan MediaPipe dan Intel NUC. Sistem ini mampu mengenali gerakan mata dengan tingkat akurasi tinggi dan menerjemahkannya menjadi perintah untuk mengontrol kursi roda. Sistem ini menawarkan solusi inovatif bagi pasien ALS yang hanya dapat menggerakkan mata.
+  \item Penelitian ini berhasil mengembangkan sistem kontrol kursi roda berbasis gestur mata menggunakan MediaPipe dan Intel NUC. Sistem ini mampu mengenali gerakan mata dengan tingkat akurasi tinggi dan menerjemahkannya menjadi perintah untuk mengontrol kursi roda.
 
   \item Model klasifikasi yang digunakan menunjukkan kinerja yang sangat baik berdasarkan hasil evaluasi confusion matrix. Model dapat mengenali berbagai gerakan mata dengan cepat dan konsisten. Memastikan bahwa model dapat diandalkan untuk mengenali gerakan mata dengan akurasi yang tinggi.
 
-  \item Pada jarak 30 dan 50 cm, model memiliki akurasi tertinggi yaitu 100\%. Model menunjukkan bahwa semakin dekat jarak mata dengan kamera, semakin tinggi akurasi yang dihasilkan.
+  \item Pada jarak 30 dan 50 cm, model memiliki akurasi tertinggi yaitu 100\%. Model menunjukkan bahwa semakin jauh jarak mata dengan kamera, semakin rendah akurasi yang dihasilkan terutama pada kelas "Maju" dan "Mundur".
 
   \item Model memiliki kinerja yang cukup baik di berbagai tingkat pencahayaan, dengan akurasi tertinggi 100\% pada pencahayaan 131 Lux. Hal ini menunjukkan bahwa cahaya memiliki pengaruh yang signifikan terhadap akurasi model, dengan peningkatan akurasi pada pencahayaan yang lebih tinggi. 
 
-  \item Pengujian performa FPS menunjukkan bahwa sistem dapat mempertahankan FPS yang stabil pada laptop (10,415 - 13,972 FPS) dan Intel NUC (8,405 - 12,448 FPS). Pada laptop FPS lebih tinggi dan stabil dibandingkan dengan Intel NUC. 
+  \item Hasil pengujian performa FPS menunjukkan bahwa sistem dapat mempertahankan FPS yang lebih stabil dan lebih cepat pada Laptop. Hal ini disebabkan perbedaaan spesifikasi yaitu laptop menggunakan GPU, sedangkan NUC menggunakan CPU.
   
   \item Waktu respons rata-rata motor untuk perintah "Kanan," "Kiri," dan "Mundur" di bawah 0,25 detik, menunjukkan sistem yang responsif. Sedangkan untuk perintah "Maju" adalah 0,4337 detik dan untuk perintah "Stop" adalah 0,4318, menunjukkan waktu respons yang lebih tinggi karena perintah tersebut memerlukan waktu yang lebih lama untuk dieksekusi.
   
-  \item Motor kursi roda memiliki waktu output yang konsisten di setiap kelas perintah, dengan variabilitas yang relatif sempit dengan nilai standar deviasi untuk kelas "Kanan" sebesar 0,408, kelas "Kiri" sebesar 0,371, kelas "Maju" sebesar 0,117, kelas "Mundur" sebesar 0,156, dan kelas "Stop" sebesar 0,361. Di antara semua kelas perintah, kelas maju memiliki nilai yang paling stabil.
+  \item Motor kursi roda memiliki waktu output yang konsisten di setiap kelas perintah, dengan variabilitas yang relatif sempit dengan nilai standar deviasi untuk kelas "Kanan" sebesar 0,408, kelas "Kiri" sebesar 0,371, kelas "Maju" sebesar 0,117, kelas "Mundur" sebesar 0,156, dan kelas "Stop" sebesar 0,361. Di antara semua kelas perintah, kelas "Maju" memiliki nilai yang paling stabil.
 
 \end{enumerate}

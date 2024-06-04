@@ -4,22 +4,22 @@
 
 % Ubah paragraf-paragraf pada bagian ini sesuai dengan yang diinginkan.
 
-Berdasarkan hasil pengujian yang telah dilakukan dan dianalisa pada bab sebelumnya, didapatkan beberapa kesimpulan sebagai berikut:
+Based on the test results that have been carried out and analyzed in the previous chapter, the following conclusions are obtained:
 
 \begin{enumerate}
 
-  \item Penelitian ini berhasil mengembangkan sistem kontrol kursi roda berbasis gestur mata menggunakan MediaPipe dan Intel NUC. Sistem ini mampu mengenali gerakan mata dengan tingkat akurasi tinggi dan menerjemahkannya menjadi perintah untuk mengontrol kursi roda. Sistem ini menawarkan solusi inovatif bagi pasien ALS yang hanya dapat menggerakkan mata.
+  \item This research successfully developed an eye gesture-based wheelchair control system using MediaPipe and Intel NUC. The system is able to recognize eye movements with a high level of accuracy and translate them into commands to control the wheelchair.
 
-  \item Model klasifikasi yang digunakan menunjukkan kinerja yang sangat baik berdasarkan hasil evaluasi confusion matrix. Model dapat mengenali berbagai gerakan mata dengan cepat dan konsisten. Memastikan bahwa model dapat diandalkan untuk mengenali gerakan mata dengan akurasi yang tinggi.
+  \item The classification model used shows excellent performance based on the confusion matrix evaluation results. The model can recognize various eye movements quickly and consistently. Ensuring that the model can reliably recognize eye movements with high accuracy.
 
-  \item Pada jarak 30 dan 50 cm, model memiliki akurasi tertinggi yaitu 100\%. Model menunjukkan bahwa semakin dekat jarak mata dengan kamera, semakin tinggi akurasi yang dihasilkan.
+  \item At distances of 30 and 50 cm, the model has the highest accuracy of 100\%. The model shows that the further away the eye is from the camera, the lower the accuracy, especially in the “Forward” and “Backward” classes.
 
-  \item Model memiliki kinerja yang cukup baik di berbagai tingkat pencahayaan, dengan akurasi tertinggi 100\% pada pencahayaan 131 Lux. Hal ini menunjukkan bahwa cahaya memiliki pengaruh yang signifikan terhadap akurasi model, dengan peningkatan akurasi pada pencahayaan yang lebih tinggi. 
+  \item The model performed reasonably well across a wide range of lighting levels, with the highest accuracy of 100\% at 131 Lux illumination. This shows that light has a significant influence on the accuracy of the model, with increased accuracy at higher illumination. 
 
-  \item Pengujian performa FPS menunjukkan bahwa sistem dapat mempertahankan FPS yang stabil pada laptop (10,415 - 13,972 FPS) dan Intel NUC (8,405 - 12,448 FPS). Pada laptop FPS lebih tinggi dan stabil dibandingkan dengan Intel NUC. 
+  \item The FPS performance test results show that the system can maintain a more stable and faster FPS on the Laptop. This is due to the difference in specifications, where the laptop uses a GPU, while the NUC uses a CPU.
   
-  \item Waktu respons rata-rata motor untuk perintah "Kanan," "Kiri," dan "Mundur" di bawah 0,25 detik, menunjukkan sistem yang responsif. Sedangkan untuk perintah "Maju" adalah 0,4337 detik dan untuk perintah "Stop" adalah 0,4318, menunjukkan waktu respons yang lebih tinggi karena perintah tersebut memerlukan waktu yang lebih lama untuk dieksekusi.
+  \item The average response time of the motors for the “Right,” “Left,” and “Backward” commands is below 0.25 seconds, indicating a responsive system. Whereas for the “Forward” command it is 0.4337 seconds and for the “Stop” command it is 0.4318, indicating a higher response time as the command takes longer to execute.
   
-  \item Motor kursi roda memiliki waktu output yang konsisten di setiap kelas perintah, dengan variabilitas yang relatif sempit dengan nilai standar deviasi untuk kelas "Kanan" sebesar 0,408, kelas "Kiri" sebesar 0,371, kelas "Maju" sebesar 0,117, kelas "Mundur" sebesar 0,156, dan kelas "Stop" sebesar 0,361. Di antara semua kelas perintah, kelas maju memiliki nilai yang paling stabil.
+  \item The wheelchair motor has consistent output times in each command class, with relatively narrow variability with standard deviation values for the “Right” class of 0.408, “Left” class of 0.371, “Forward” class of 0.117, “Backward” class of 0.156, and “Stop” class of 0.361. Among all the command classes, the "Forward" class has the most stable value.
 
 \end{enumerate}
